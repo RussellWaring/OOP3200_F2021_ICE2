@@ -19,7 +19,7 @@ int main()
 {
 	// Declarations
 	// a point called 'origin', initialized to 0, 0
-	CartesianPoint origin = CartesianPoint(0, 0);
+	CartesianPoint origin = CartesianPoint(10, 20);
 	
 	// a point called 'destination'
 	CartesianPoint destination;
@@ -51,6 +51,12 @@ int main()
 		// determine the distance between the two points
 		// distance = origin.GetDistanceTo(destination);
 		distance = origin - destination;
+
+		std::cout << "origin is equal to destination?: " << (origin == destination) << std::endl; // boolean 0 = false
+
+		CartesianPoint newPoint = origin + destination;
+
+		std::cout << "origin plus destination = " << newPoint.ToString() << std::endl;
 
 		// Output 
 		// Show the points and the distance
